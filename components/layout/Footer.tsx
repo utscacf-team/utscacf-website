@@ -30,7 +30,7 @@ const Footer = () => {
   ];
 
   return (
-    <Section className="bg-black !py-10 text-white sm:!min-h-0">
+    <Section className="bg-black py-20 text-white sm:!min-h-0">
       <div className="mb-10 flex w-full flex-col items-start justify-around self-center border-b pb-10 text-2xl sm:flex-row sm:items-center sm:gap-2 sm:text-2xl md:text-4xl">
         <p>Faith</p>
         <LuDot className="hidden sm:block" />
@@ -38,7 +38,7 @@ const Footer = () => {
         <LuDot className="hidden sm:block" />
         <p>Transformation</p>
       </div>
-      <nav className="mb-10 mt-2 flex gap-4">
+      <nav className="mt-2 flex gap-4">
         {socials.map((social, index) => (
           <SocialIcon
             key={index}
