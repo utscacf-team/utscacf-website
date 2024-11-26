@@ -15,7 +15,6 @@ jobs:
         name: Install pnpm
         id: pnpm-install
         with:
-          version: 9
           run_install: false
       - name: Install Vercel CLI
         run: pnpm add --global vercel@latest
