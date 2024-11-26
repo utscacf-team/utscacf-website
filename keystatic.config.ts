@@ -95,7 +95,7 @@ export default config({
   storage: {
     kind: "github",
     repo: {
-      owner: "yong1le",
+      owner: "utscacf-team",
       name: "utscacf-website",
     },
   },
