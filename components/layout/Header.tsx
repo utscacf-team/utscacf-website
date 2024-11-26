@@ -46,10 +46,10 @@ const Header = () => {
       title: "Committee",
       url: "/committee",
     },
-    {
-      title: "Join Us",
-      url: "/contact",
-    },
+    // {
+    //   title: "Join Us",
+    //   url: "/contact",
+    // },
   ];
 
   return (
