@@ -18,7 +18,7 @@ const Church = ({
       <Image
         src={image || "/default.png"}
         alt={name}
-        className="h-32 w-full object-cover sm:h-56 md:h-72 lg:h-96"
+        className="aspect-[4/3] w-full md:aspect-[16/9]"
       />
       <p className="text-sm text-slate-600">{description}</p>
       <Text variant="p">{location}</Text>

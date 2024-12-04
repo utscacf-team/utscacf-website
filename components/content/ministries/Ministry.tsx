@@ -4,11 +4,11 @@ import { MinistryType } from "@/types";
 
 const Ministry = async ({ name, image, description }: MinistryType) => {
   return (
-    <div className="flex max-w-[1600px] flex-col gap-6 rounded-2xl">
+    <div className="flex flex-col gap-6 rounded-2xl">
       <Image
         src={image || "/ministry.png"}
         alt={`Image of ${name}`}
-        className="h-[300px] w-[100%] md:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[800px]"
+        className="aspect-[4/3] w-full md:aspect-[16/9]"
       />
       <div>
         <p className="text-2xl font-bold">{name}</p>

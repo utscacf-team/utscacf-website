@@ -10,7 +10,7 @@ const Committee = ({ name, roles, handles, image }: CommitteeType) => {
       <Image
         src={image || "/committee.jpg"}
         alt={`image of ${name}`}
-        className="h-[380px] md:h-[350px] lg:h-[250px] xl:h-[300px] 2xl:h-[380px]"
+        className="aspect-[1/1] w-full"
       />
       {/* Name */}
       <p className="pt-6 text-xl">{name}</p>
