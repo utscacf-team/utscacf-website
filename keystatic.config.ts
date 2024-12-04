@@ -76,7 +76,7 @@ export const committeeSchema = block({
 export const ministrySchema = block({
   label: "Ministry",
   schema: {
-    name: fields.text({ label: "Name" }),
+    name: fields.text({ label: "Name", validation: { isRequired: true } }),
     image: fields.image({
       label: "Image (optional)",
       directory: "public/images/ministry",
@@ -91,9 +91,52 @@ export const ministrySchema = block({
   },
 });
 
+export const churchSchema = block({
+  label: "Church",
+  schema: {
+    name: fields.text({
+      label: "Name",
+      description: "Name of the church",
+      validation: { isRequired: true },
+    }),
+    image: fields.image({
+      label: "Image (optional)",
+      directory: "public/images/church",
+      publicPath: "/images/church",
+    }),
+    ministries: fields.array(
+      fields.object({
+        name: fields.text({
+          label: "Name",
+          description: "Name of the service",
+          validation: { isRequired: true },
+        }),
+        time: fields.text({
+          label: "Time",
+          description: "Time of the service",
+          validation: { isRequired: true },
+        }),
+      }),
+      {
+        label: "Ministries",
+        itemLabel: (props) => props.fields.name.value,
+      },
+    ),
+    location: fields.text({
+      label: "Location",
+      validation: { isRequired: true },
+    }),
+    description: fields.text({
+      label: "Description (optional)",
+      description: "Short Description of the church",
+      multiline: true,
+    }),
+  },
+});
+
 export default config({
   storage: {
-    kind: "github",
+    kind: "local",
     repo: {
       owner: "utscacf-team",
       name: "utscacf-website",
@@ -101,7 +144,7 @@ export default config({
   },
   ui: {
     brand: { name: "UTSC ACF" },
-    navigation: ["vision", "committee", "ministry", "content"],
+    navigation: ["vision", "committee", "ministry", "church", "content"],
   },
 
   singletons: {
@@ -133,7 +176,7 @@ export default config({
           label: "Content",
           components: {
             CommitteeContainer: repeating({
-              label: "CommitteeGrid",
+              label: "Committee Container",
               children: ["Committee"],
               schema: {},
             }),
@@ -151,11 +194,29 @@ export default config({
           label: "Content",
           components: {
             MinistryContainer: repeating({
-              label: "MinistryGrid",
+              label: "Ministry Container",
               children: ["Ministry"],
               schema: {},
             }),
             Ministry: ministrySchema,
+          },
+        }),
+      },
+    }),
+
+    church: singleton({
+      path: "content/church",
+      label: "Church Page",
+      schema: {
+        content: fields.mdx({
+          label: "Content",
+          components: {
+            ChurchContainer: repeating({
+              label: "Church Container",
+              children: ["Church"],
+              schema: {},
+            }),
+            Church: churchSchema,
           },
         }),
       },
