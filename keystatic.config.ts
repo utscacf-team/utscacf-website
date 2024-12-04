@@ -136,7 +136,7 @@ export const churchSchema = block({
 
 export default config({
   storage: {
-    kind: "local",
+    kind: "github",
     repo: {
       owner: "utscacf-team",
       name: "utscacf-website",
