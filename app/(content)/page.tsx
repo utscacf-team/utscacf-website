@@ -5,7 +5,7 @@ import { reader } from "@/app/_lib/reader";
 import Content from "@/components/shared/ui/Content";
 import MDXContent from "@/components/shared/mdx/MDXContent";
 import Ministry from "@/components/content/ministries/Ministry";
-import MinistryGrid from "@/components/content/ministries/MinistryGrid";
+import MinistryContainer from "@/components/content/ministries/MinistryContainer";
 
 export default async function Home() {
   const vision = await reader().singletons.vision.read();
@@ -30,7 +30,7 @@ export default async function Home() {
               source={await ministryPage.content()}
               components={{
                 Ministry: Ministry,
-                MinistryGrid: MinistryGrid,
+                MinistryGrid: MinistryContainer,
               }}
             />
           )}

@@ -132,7 +132,7 @@ export default config({
         content: fields.mdx({
           label: "Content",
           components: {
-            CommitteeGrid: repeating({
+            CommitteeContainer: repeating({
               label: "CommitteeGrid",
               children: ["Committee"],
               schema: {},
@@ -150,7 +150,7 @@ export default config({
         content: fields.mdx({
           label: "Content",
           components: {
-            MinistryGrid: repeating({
+            MinistryContainer: repeating({
               label: "MinistryGrid",
               children: ["Ministry"],
               schema: {},

@@ -3,7 +3,7 @@ import Section from "@/components/layout/Section";
 import { reader } from "@/app/_lib/reader";
 
 import Committee from "@/components/content/committee/Committee";
-import CommitteeGrid from "@/components/content/committee/CommitteeGrid";
+import CommitteeContainer from "@/components/content/committee/CommitteeContainer";
 import MDXContent from "@/components/shared/mdx/MDXContent";
 
 const CommitteePage = async () => {
@@ -16,7 +16,7 @@ const CommitteePage = async () => {
           source={await committeePage.content()}
           components={{
             Committee: Committee,
-            CommitteeGrid: CommitteeGrid,
+            CommitteeGrid: CommitteeContainer,
           }}
         />
       )}

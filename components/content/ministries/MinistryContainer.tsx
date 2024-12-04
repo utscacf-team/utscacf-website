@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/carousel";
 import React from "react";
 
-const MinistryGrid = ({ children }: { children: React.ReactNode }) => {
+const MinistryContainer = ({ children }: { children: React.ReactNode }) => {
   return (
     <Carousel
       className="py-3"
@@ -29,4 +29,4 @@ const MinistryGrid = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default MinistryGrid;
+export default MinistryContainer;
