@@ -16,6 +16,7 @@ const Image = ({
         src={`${src}`}
         alt={alt}
         fill={true}
+        priority={true}
         className="rounded-2xl object-cover"
       />
     </div>
