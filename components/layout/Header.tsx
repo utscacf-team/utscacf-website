@@ -39,17 +39,13 @@ const Header = () => {
 
   const informationPages = [
     {
-      title: "Ministries",
-      url: "/ministries",
-    },
-    {
       title: "Committee",
       url: "/committee",
     },
-    // {
-    //   title: "Join Us",
-    //   url: "/contact",
-    // },
+    {
+      title: "Find a Church",
+      url: "/church",
+    },
   ];
 
   return (

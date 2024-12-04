@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Ministries - UTSC ACF",
+  title: "Find a Church - UTSC ACF",
 };
 
 export default function RootLayout({
