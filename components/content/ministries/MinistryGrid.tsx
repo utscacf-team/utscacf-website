@@ -10,6 +10,7 @@ import React from "react";
 const MinistryGrid = ({ children }: { children: React.ReactNode }) => {
   return (
     <Carousel
+      className="py-3"
       opts={{
         align: "start",
       }}
@@ -22,8 +23,8 @@ const MinistryGrid = ({ children }: { children: React.ReactNode }) => {
             </CarouselItem>
           ))}
       </CarouselContent>
-      <CarouselPrevious className="bg-inherit text-inherit" />
-      <CarouselNext className="bg-inherit text-inherit" />
+      <CarouselPrevious className="hidden bg-inherit text-inherit md:flex" />
+      <CarouselNext className="hidden bg-inherit text-inherit md:flex" />
     </Carousel>
   );
 };
