@@ -16,7 +16,7 @@ const CommitteePage = async () => {
           source={await committeePage.content()}
           components={{
             Committee: Committee,
-            CommitteeGrid: CommitteeContainer,
+            CommitteeContainer: CommitteeContainer,
           }}
         />
       )}

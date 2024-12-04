@@ -30,7 +30,7 @@ export default async function Home() {
               source={await ministryPage.content()}
               components={{
                 Ministry: Ministry,
-                MinistryGrid: MinistryContainer,
+                MinistryContainer: MinistryContainer,
               }}
             />
           )}
